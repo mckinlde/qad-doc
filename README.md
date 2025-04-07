@@ -21,3 +21,8 @@ Run the app:
 ```bash
 python hello-world.py
 ```
+
+git remote set-url origin https://github.com/mckinlde/qad-doc.git
+brew install git-filter-repo
+git filter-repo --path output.mp4 --path RickRoll.mp4 --invert-paths
+git push origin --force
