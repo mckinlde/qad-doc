@@ -3,6 +3,7 @@
 
 "how to use something like ffmpeg to demux, decode, encode, and mux video streams.  Ideally at the programatic layer, not the CLI."
 
+Rock on; so if I change something to B&W from Python with 'include av' then can I sit at the cool kids table and talk about anime? 
 
 ## 🔧 Setup
 
