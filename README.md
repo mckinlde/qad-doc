@@ -17,9 +17,19 @@ Run setup.sh:
 bash setup.sh
 ```
 
-Run the app:
+Test config:
 ```bash
 python hello-world.py
+```
+
+Run the app:
+```bash
+bash run-pipeline.sh
+```
+
+If that doesn't work, make sure it's executable:
+```bash
+chmod +x run_pipeline.sh
 ```
 
 git remote set-url origin https://github.com/mckinlde/qad-doc.git
