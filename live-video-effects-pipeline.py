@@ -17,7 +17,7 @@ output_video_stream.pix_fmt = 'yuv420p'
 # Set up audio stream (copy directly)
 input_audio_stream = next((s for s in input_container.streams if s.type == 'audio'), None)
 if input_audio_stream:
-    output_audio_stream = output_container.add_stream(template=input_audio_stream)
+    output_audio_stream = output_container.add_stream('copy', template=input_audio_stream)
 else:
     output_audio_stream = None
 
@@ -27,7 +27,7 @@ print("init'd streams")
 for packet in input_container.demux():
     if packet.stream.type == 'video':
         for frame in packet.decode():
-            print('video frame')
+            # a little too much printing here print('video frame')
             img = frame.to_ndarray(format='bgr24')
 
             # Apply OpenCV effects
@@ -51,7 +51,7 @@ for packet in input_container.demux():
 for packet in output_video_stream.encode():
     output_container.mux(packet)
 
-print('end mux')
+print('end flush')
 input_container.close()
 output_container.close()
 print('containers closed; exiting')
