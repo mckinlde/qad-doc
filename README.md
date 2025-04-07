@@ -29,7 +29,7 @@ bash run-pipeline.sh
 
 If that doesn't work, make sure it's executable:
 ```bash
-chmod +x run_pipeline.sh
+chmod +x run-pipeline.sh
 ```
 
 git remote set-url origin https://github.com/mckinlde/qad-doc.git
